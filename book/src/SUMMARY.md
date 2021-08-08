@@ -7,3 +7,4 @@
 - [The sound emitter](./chapter_5.md)
 - [The scene system](./chapter_6.md)
 - [The entity system](./chapter_7.md)
+- [Inputs](./chapter_8.md)

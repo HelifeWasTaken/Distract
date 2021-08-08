@@ -27,7 +27,7 @@ typedef struct distract_scene {
     struct gui_element *gui_elements;
     bool in_exit_state;
     int pending_distract_scene_id;
-    void *state;
+    void *storage;
 } distract_scene_t;
 
 ///

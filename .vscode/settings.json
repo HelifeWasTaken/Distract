@@ -9,6 +9,7 @@
         "debug.h": "c",
         "resources.h": "c",
         "hashmap.h": "c",
-        "util.h": "c"
+        "util.h": "c",
+        "ostream": "c"
     }
 }
