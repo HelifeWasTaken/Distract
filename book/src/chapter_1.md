@@ -48,9 +48,9 @@ If you find any please really make sure to inform us.
 - CMake
 - GCC
 - g++
-- SFML (http://www.sfml-dev.org/)
-- CSFML (https://github.com/CSFML/CSFML)
-- Doxygen (http://www.stack.nl/~dimitri/doxygen/) -> Optional but recomended for the documentation
+- [SFML](http://www.sfml-dev.org/)
+- [CSFML](https://github.com/CSFML/CSFML)
+- [Doxygen](http://www.stack.nl/~dimitri/doxygen/) -> Optional but recomended for the documentation
 
 ### Build
 
