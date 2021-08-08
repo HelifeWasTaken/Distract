@@ -74,12 +74,6 @@ bool is_distract_scene_updated(game_t *game);
 void switch_to_distract_scene(game_t *game, int id);
 
 ///
-/// Do no exit the current distract_scene but recreate it to load a new world
-/// specified by an file
-///
-void switch_to_world(game_t *game, char const *file);
-
-///
 /// Set the distract_scene to open when the current distract_scene is closed.
 ///
 void set_pending_distract_scene(game_t *game, int id);
