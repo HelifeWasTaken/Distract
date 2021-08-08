@@ -1,0 +1,4 @@
+You can notice that we did not destroy the sprite at the end of the loop.
+It is because the destroy_game function will destroy the sprite by itself as long as you use the wrappers of Distract.
+Creating a sprite with sfSprite_create will need you to destroy it manually.
+Otherwise you should not destroy a sprite created with create_sprite with sfSprite_destroy but with the destroy_resource function. (You might not use this function but it is still important to know that it exists.)
