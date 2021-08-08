@@ -8,3 +8,6 @@
 - [The scene system](./chapter_6.md)
 - [The entity system](./chapter_7.md)
 - [Inputs](./chapter_8.md)
+- [Graphics](./chapter_9.md)
+- [Pausable clock](./chapter_10.md)
+- [Animables](./chapter_11.md)

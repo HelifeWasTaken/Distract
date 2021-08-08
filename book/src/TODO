@@ -1,8 +1,6 @@
 # TODO
-- Graphics: Gui view and utils
 - Animable: Animables idk
-- Framebuffer
-- pausable_clock
 - Game in Depth: advanced overview of game
 - Jobs
+- Framebuffer
 - RenderStates: GLSL and OpenGL

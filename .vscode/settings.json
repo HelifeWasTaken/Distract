@@ -10,6 +10,7 @@
         "resources.h": "c",
         "hashmap.h": "c",
         "util.h": "c",
-        "ostream": "c"
+        "ostream": "c",
+        "stdio.h": "c"
     }
 }
