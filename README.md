@@ -39,7 +39,7 @@ The returned code will be propagated, and usually correspond to the exit code.
 ```c
 #include "distract/game.h"
 #include "distract/entity.h"
-#include "distract/distract_resources.h"
+#include "distract/resources.h"
 
 // The lifecycle of the play distract_scene
 int play_lifecycle(game_t *game)
@@ -139,7 +139,7 @@ Once you got your data structure, you can implement the functions:
 ```c
 #include "distract/game.h"
 #include "distract/entity.h"
-#include "distract/distract_resources.h"
+#include "distract/resources.h"
 #include "distract/graphics.h"
 #include "stdlib.h"
 #include "<yourproject>/entities.h"
@@ -284,7 +284,7 @@ void update_customentity(game_t *game, entity_t *entity)
 ```c
 #include "distract/game.h"
 #include "distract/entity.h"
-#include "distract/distract_resources.h"
+#include "distract/resources.h"
 
 // The lifecycle of the play distract_scene
 int play_lifecycle(game_t *game)
@@ -313,7 +313,7 @@ int play_lifecycle(game_t *game)
 ```c
 #include "distract/game.h"
 #include "distract/entity.h"
-#include "distract/distract_resources.h"
+#include "distract/resources.h"
 
 // The lifecycle of the play distract_scene
 int play_lifecycle(game_t *game)
@@ -368,7 +368,7 @@ FOREACH_ENTITY_OF_TYPE(CUSTOMENTITY, game->distract_scene->entities, entity) {
     customentity_t *customentity = entity->instance;
 
     // ...
-}   
+}
 ```
 
 ### Create distract_job
@@ -381,8 +381,8 @@ game loop.
 #include "stdio.h"
 #include "distract/game.h"
 #include "distract/entity.h"
-#include "distract/distract_resources.h"
-#include "distract/distract_job.h"
+#include "distract/resources.h"
+#include "distract/job.h"
 
 // Note: this function will be executed asynchronously from another thread
 void my_distract_job(distract_job_t *distract_job)
@@ -425,8 +425,8 @@ You may want to communicate with your distract_job to get status, update, or tri
 #include "stdio.h"
 #include "distract/game.h"
 #include "distract/entity.h"
-#include "distract/distract_resources.h"
-#include "distract/distract_job.h"
+#include "distract/resources.h"
+#include "distract/job.h"
 
 enum message_type {
     MYJOB_MESSAGE
@@ -463,7 +463,7 @@ int play_lifecycle(game_t *game)
 
     // Until the distract_scene is closed
     while (is_distract_scene_updated(game)) {
-        
+
         // receive messages from the distract_job
         // note: `poll_distract_job_message` returns a `void *`
         char *msg;
@@ -492,8 +492,8 @@ A more complex variant:
 #include "stdio.h"
 #include "distract/game.h"
 #include "distract/entity.h"
-#include "distract/distract_resources.h"
-#include "distract/distract_job.h"
+#include "distract/resources.h"
+#include "distract/job.h"
 
 enum message_type {
     MYJOB_MESSAGE,
@@ -521,7 +521,7 @@ void my_distract_job(distract_job_t *distract_job)
 
         // sleep some time
         sfSleep((sfTime) { 10000 });
-    
+
     }
 }
 
@@ -538,7 +538,7 @@ int play_lifecycle(game_t *game)
 
     // Until the distract_scene is closed
     while (is_distract_scene_updated(game)) {
-        
+
         // receive messages from the distract_job
         char *msg;
         while ((msg = poll_distract_job_message(distract_job, MYJOB_MESSAGE)) != NULL) {
@@ -578,7 +578,7 @@ void some_function()
 
     // it will stop the execution until the distract_job is completed
     wait_distract_job(distract_job);
-    
+
     // we can still get the unread messages from the distract_job
     // even if at this point the distract_job is stopped
     char *msg;
