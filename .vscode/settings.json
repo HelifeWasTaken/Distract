@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "distract_hashmap.h": "c",
+        "game.h": "c",
+        "entity.h": "c",
+        "graphics.h": "c",
+        "system.h": "c",
+        "def.h": "c",
+        "debug.h": "c",
+        "resources.h": "c",
+        "hashmap.h": "c",
+        "util.h": "c"
+    }
+}
