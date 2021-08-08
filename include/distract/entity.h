@@ -24,9 +24,6 @@ typedef struct entity {
     int type;
     int z;
     void *instance;
-    bool (*do_collide_point)(struct entity *entity, sfVector2f *pos);
-    bool (*do_collide_rect)(struct entity *entity, sfFloatRect *rect,
-        sfFloatRect *overlap);
     bool use_multithreading;
     struct thread_info *threadinfo;
     bool draw_on_gui;

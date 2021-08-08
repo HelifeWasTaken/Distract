@@ -24,7 +24,6 @@ static void set_defaults(int type, entity_t *entity,
     entity->pos = (sfVector2f) { 0, 0 };
     entity->info = info;
     entity->type = type;
-    entity->do_collide_point = NULL;
 }
 
 static void thread_update(void *data)

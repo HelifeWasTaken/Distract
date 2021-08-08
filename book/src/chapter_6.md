@@ -15,11 +15,12 @@ Every state has a set of rules that define how the game behaves.
 That are principally defniend by the game engine.
 
 The ones that are most important are:
-	- The Create method.
-	- The Draw method.
-	- The Update method.
-	- The Handle Event method.
-	- The Destroy method.
+
+- The Create method.
+- The Draw method.
+- The Update method.
+- The Handle Event method.
+- The Destroy method.
 
 Thoses are going to be seen more in depth in the Entities chapter.
 

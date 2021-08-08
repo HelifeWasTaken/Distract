@@ -7,12 +7,13 @@ As seen before the resources are managed automatically by the system.
 Everything is destroyed when the scene is ended.
 
 The list of resources that exists are:
-    - sfTexture *,
-    - sfFont *,
-    - sfSound *,
-    - sfMusic *,
-    - sfSoundBuffer *,
-    - sfVertexArray *
+
+- sfTexture
+- sfFont
+- sfSound
+- sfMusic
+- sfSoundBuffer
+- sfVertexArray
 
 ## How to store/get a resource:
 ```c

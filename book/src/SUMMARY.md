@@ -1,7 +1,9 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
-- [Chapter 2](./chapter_2.md)
-- [Chapter 3](./chapter_3.md)
-- [Chapter 4](./chapter_4.md)
-- [Chapter 5](./chapter_5.md)
+- [Introduction](./chapter_1.md)
+- [A first step](./chapter_2.md)
+- [Your first image](./chapter_3.md)
+- [Resources](./chapter_4.md)
+- [The sound emitter](./chapter_5.md)
+- [The scene system](./chapter_6.md)
+- [The entity system](./chapter_7.md)
