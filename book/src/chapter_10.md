@@ -28,7 +28,7 @@ void update_player(game_t *game, entity_t *entity)
 So the movement of the player is automatized but you can pause it by setting the is_paused variable to true.
 
 Here are the possibilities of the pausable clock:
-```
+```c
 ///
 /// Create a clock that can be paused.
 ///

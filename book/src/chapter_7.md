@@ -345,3 +345,10 @@ void sort_entities(game_t *game);
 ### I need to differenciate gui and non gui entities
 
 A draw_on_gui variable can be added to your entity. (we will see it later with windows and graphics)
+
+### I want to access to have more variables in the prototype of my entity
+
+Don't.
+Use configuration files instead.
+
+If you really think a configuration file is overkill at the moment you can store it temporarily in the game struct with `game->stockage`.

@@ -31,7 +31,7 @@ int main(void)
     }
 	while (is_distract_scene_updated(game)) {
 		while (sfRenderWindow_pollevent(game->window, &game->event)) {
-			if (event.type == sfEvtclosed) {
+			if (game->event.type == sfEvtClose) {
 				sfRenderWindow_close(game->window);
 			}
 		}

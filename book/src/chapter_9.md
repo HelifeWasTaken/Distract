@@ -1,6 +1,6 @@
 # Distract
 
-## Graphics
+## Baby Graphics
 
 This will be a little introduction to Graphics in Distract.
 
