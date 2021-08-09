@@ -13,7 +13,6 @@ The list of resources that exists are:
 - sfSound
 - sfMusic
 - sfSoundBuffer
-- sfVertexArray
 
 ## How to store/get a resource:
 ```c
@@ -27,15 +26,11 @@ Some functions are provided to help you such as seen before:
 sfFont *create_font(game_t *game, char *filepath);
 sfSound *create_distract_sound(game_t *game, char *filepath);
 sfMusic *create_distract_music(game_t *game, char *filepath);
-sfVertexArray *create_vertex(game_t *game, char *filepath);
 sfTexture *create_texture(game_t *game, char *filepath);
 ```
 
 Thoses all uses the same function: create_distract_resource.
 But really consider using the wrappers which are more convenient.
-
-One thing important is about the create_vertex function.
-The "filepath" argument is not the path to the file, but the name of the vertex array.
 
 If you want to create a resource please be sure to name it carefully.
 For example:
@@ -47,12 +42,6 @@ sfTexture *tx2 = create_texture(game, "my_texture.png");
 // The system will recognize that and will not create a new resource.
 // So you can freely "create" multiple times the same resource.
 ```
-
-But for vertex arrays you must be careful.
-If you use the same name twice for the same vertex array, the system will not create a new resource.
-So you will end up with two vertex arrays with the same pointer in memory.
-That could lead up to very bad things.
-So name your vertex arrays carefully!
 
 ## Behind the scenes: (advanced)
 
@@ -69,7 +58,6 @@ typedef struct distract_resource {
         sfSoundBuffer *distract_sound_buffer;
         sfSound *distract_sound;
         sfFont *font;
-        sfVertexArray *vao;
     };
 } distract_resource_t;
 ```

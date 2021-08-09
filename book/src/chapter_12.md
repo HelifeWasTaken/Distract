@@ -14,7 +14,7 @@ Vertices (plural of vertex) alone don't do much. They are always grouped into pr
 
 For example this code will generate you nice little triangle to visualize
 ```c
-sfVertexArray *vertices = create_vertex(game, "My Random Vertex Array");
+sfVertexArray *vertices = sfVertexArray_create();
 sfVertexArray_setPrimitiveType(vertices, SF_TRIANGLES);
 sfVertexArray_resize(vertices, 3);
 sfVertex *vertex = sfVertexArray_getVertex(vertices, 0);
@@ -28,6 +28,9 @@ vertex[2].color = sfBlue;
 
 // To draw the vertex array
 sfRenderWindow_drawVertexArray(game->window, vertices);
+
+// To destroy
+sfVertexArray_destroy(vertices);
 ```
 
 There is a full List of primitive types in the [SFML Primitives](http://www.sfml-dev.org/documentation/1.6/namespacesf_1_1Primitive.php) documentation.
@@ -115,6 +118,14 @@ void draw_tilemap(tilemap_t *tilemap)
 
     state.texture = tilemap->texture;
     sfRenderWindow_drawVertexArray(game->window, tilemap->vertices, &state);
+}
+
+void destroy_tilemap(entity_t *entity)
+{
+    tilemap_t *tilemap = entity->instance;
+
+    sfVertexArray_destroy(tilemap->vertices);
+    free(tilemap);
 }
 ```
 

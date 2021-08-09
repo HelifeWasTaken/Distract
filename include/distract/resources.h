@@ -37,7 +37,6 @@ typedef struct distract_resource {
         sfSoundBuffer *distract_sound_buffer;
         sfSound *distract_sound;
         sfFont *font;
-        sfVertexArray *vao;
     };
 } distract_resource_t;
 
@@ -48,7 +47,6 @@ typedef struct distract_resource {
         sfSoundBuffer *: sfSoundBuffer_destroy, \
         sfMusic *: sfMusic_destroy, \
         sfFont *: sfFont_destroy, \
-        sfVertexArray *: sfVertexArray_destroy)(distract_resource)
 
 #define SAFE_RESOURCE_DESTROY(fun, res) \
     do { \
@@ -116,12 +114,6 @@ sfSound *create_distract_sound(game_t *game, char *filepath);
 /// If distract_music is already in memory, will return the existing instance.
 ///
 sfMusic *create_distract_music(game_t *game, char *filepath);
-
-///
-/// Create and register a vertex array
-/// If vertex array is already in memory, will return the existing instance.
-///
-sfVertexArray *create_vertex(game_t *game, char *filepath);
 
 #define DESTROY_TEXTURES(...) \
     destroy_textures(ARGS_COUNT(# __VA_ARGS__), ## __VA_ARGS__)

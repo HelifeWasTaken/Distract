@@ -80,7 +80,7 @@ It is because the destroy_game function will destroy the texture by itself as lo
 Creating a sprite with sfTexture_create will need you to destroy it manually.
 Otherwise you should not destroy a texture created with create_texture or any resource type (see the distract_resource_t structure). But with the destroy_resource function. (You might not use this function but it is still important to know that it exists.)
 
-All the resources such as the texture, the music, sound buffers, sound, font, and vertex arrays are destroyed automatically by the `game manager` at the end of the scene.
+All the resources such as the texture, the music, sound buffers, sound, and font are destroyed automatically by the `game manager` at the end of the scene.
 
 You might say actually it is not that simple.
 Or it might take a lot of messy code to draw a sprite.
