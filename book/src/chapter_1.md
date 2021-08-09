@@ -5,7 +5,7 @@ Distract is an `ECS Game Engine` written in `C`.
 
 It also uses the CSFML library for windowing and input handling.
 
-It was orignally was created for a `RPG` game called (ThatDayITriedToBecomeTheDemonKing)[https://github.com/Heliferepo/ThatDayITriedToBecomeTheDemonKing-myrpg]
+It was orignally was created for a `RPG` game called [ThatDayITriedToBecomeTheDemonKing](https://github.com/Heliferepo/ThatDayITriedToBecomeTheDemonKing-myrpg)
 
 So the engine might be well suited for types of games such as Point and click and RPG Style such as Final Fantasy ...
 
