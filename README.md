@@ -1,5 +1,9 @@
 # Distract
 
+## Authors:
+- Alexis Cheron (Original Author)
+- Mattis Dalleau (Resources Handler, Input, Memory Management, Bit of Entities, The Book)
+
 ## How to use
 
 ### Create a game with a window
