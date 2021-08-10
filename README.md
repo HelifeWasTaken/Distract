@@ -1,5 +1,11 @@
 # Distract
 
+## Authors:
+- Alexis Cheron (Original Author) -> [Norech Github's](https://github.com/norech)
+- Mattis Dalleau (Resources Handler, Input, Memory Management (Leak Check), Bit of Entities, The Book) -> [Me](https://github.com/Heliferepo/Distract)
+
+This is a rework mostly done while an RPG project was made Alexis Cheron came with his library and I helped him doing the things listed above...
+
 ## How to use
 
 ### Create a game with a window
