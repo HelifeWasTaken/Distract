@@ -49,5 +49,3 @@ void destroy_pausable_clock(pausable_clock_t *clock);
 ///
 void restart_pausable_clock(pausable_clock_t *clock);
 ```
-
-Setting the pausable clock to be stopped is done without any function call.

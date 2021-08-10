@@ -2,13 +2,17 @@
 
 ## Scenes
 
-### Basics
+### Basics - The state machine
 
-A scene in a game is also called a state.
+Game states are usually managed by something called a state machine. It is the one responsible for calling the right function at every iteration of the game loop. Only one state can be active at a time!
+<html>
+    <img src="../images/state-machine-1.gif">
+</html>
 
-A state can be the game menu, the game play screen, the game over screen, etc.
-
-It is a way to manage the flow of the game.
+The state machine is often implemented as a stack, where states can be pushed and popped. The state at the top of the stack is the active state.
+<html>
+    <img src="../images/state-machine-2.gif">
+</html>
 
 Every state has a set of rules that define how the game behaves.
 
@@ -135,5 +139,6 @@ int main(void)
 }
 ```
 This is a basic example of a scene.
-The menu_lifecycle function is called at the beginning of the scene.
+The `menu_lifecycle` function is called at the beginning of the scene.
 Then if the user hits the play button, the scene is changed to the play scene.
+

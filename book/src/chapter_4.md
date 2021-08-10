@@ -29,7 +29,7 @@ sfMusic *create_distract_music(game_t *game, char *filepath);
 sfTexture *create_texture(game_t *game, char *filepath);
 ```
 
-Thoses all uses the same function: create_distract_resource.
+Thoses all uses the same function: `create_distract_resource`.
 But really consider using the wrappers which are more convenient.
 
 If you want to create a resource please be sure to name it carefully.
