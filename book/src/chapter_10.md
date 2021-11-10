@@ -17,7 +17,7 @@ The way it's used is like this:
 
 void update_player(game_t *game, entity_t *entity)
 {
-	player_t *player = entity->instance;
+    player_t *player = entity->instance;
 
     tick_pausable_clock(player->movement_clock);
     if (player->movement_clock.time >= 0.3) {
