@@ -11,6 +11,6 @@
 - [Baby Graphics](./chapter_9.md)
 - [Pausable clock](./chapter_10.md)
 - [Animables](./chapter_11.md)
-- [Advanced Graphics -> Tilemaps - Shaders and GLSL](./chapter_12.md)]
+- [Advanced Graphics -> Tilemaps - Shaders and GLSL](./chapter_12.md)
 - [Multithreading](./chapter_13.md)
 - [Framebuffer](./chapter_14.md)
