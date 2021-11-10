@@ -291,6 +291,11 @@ bool player_create(game_t *game, entity_t *entity)
         free(player);
         return false;
     }
+    if (entity->instance == NULL) {
+    	fprintf(stderr, "Error: Found map but instance is NULL\n");
+	free(player);
+	return false;
+    }
     player->map = entity->instance;
     entity->instance = player;
     player->entity = entity;
@@ -311,11 +316,11 @@ void entityAupdate(game_t *game, entity_t *entity)
 {
     entityA_t *entity = entity->instance;
 
-    if (entity.entityB_pointer == NULL) {
-        entity.entityB_pointer = get_instance(game, ENTITY_B);
-        if (entity.entityB_pointer == NULL) {
+    if (entity->entityB_pointer == NULL) {
+        entity->entityB_pointer = get_instance(game, ENTITY_B);
+        if (entity->entityB_pointer == NULL) {
             fprintf(stderr, "Error: cannot find entity B\n");
-            abort();
+            // abort(); (maybe)
         }
     }
     // foo ...
