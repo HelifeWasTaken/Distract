@@ -70,14 +70,14 @@ struct player {
 
 bool player_create(game_t *game, entity_t *entity)
 {
-	struct player *player = malloc(sizeof(struct player));
+    struct player *player = malloc(sizeof(struct player));
     if (player == NULL) {
         fprintf(stderr, "Could not allocate memory for player\n");
         return false;
     }
-	player->entity = entity;
-	entity->instance = player;
-	return true;
+    player->entity = entity;
+    entity->instance = player;
+    return true;
 }
 
 void player_draw(game_t *game, entity_t *entity)
