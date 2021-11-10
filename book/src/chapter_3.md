@@ -13,14 +13,14 @@ Now it is time to draw something.
 
 int main(void)
 {
-	struct game *game = create_game();
+    struct game *game = create_game();
     sfSprite *sprite = NULL;
     sfTexture *texture = NULL;
 
-	if (game == NULL)
-		return 1;
-	game->mode = mode(1280, 720, 60);
-	game->window = create_standard_window(game->mode, "my first window! :d");
+    if (game == NULL)
+	return 1;
+    game->mode = mode(1280, 720, 60);
+    game->window = create_standard_window(game->mode, "my first window! :d");
     texture = create_texture(game, "image.png");
     sprite = create_sprite(texture, NULL);
     if (window == NULL || texture == NULL || sprite == NULL) {
@@ -29,16 +29,16 @@ int main(void)
         destroy_game(game);
         return 1;
     }
-	while (is_distract_scene_updated(game)) {
-		while (sfRenderWindow_pollevent(game->window, &game->event)) {
-			if (game->event.type == sfEvtClose) {
-				sfRenderWindow_close(game->window);
-			}
-		}
+    while (is_distract_scene_updated(game)) {
+         while (sfRenderWindow_pollevent(game->window, &game->event)) {
+             if (game->event.type == sfEvtClose) {
+                 sfRenderWindow_close(game->window);
+	     }
+        }
         sfRenderWindow_clear(game->window, sfBlack);
         sfRenderWindow_draw(game->window, sprite, NULL);
         sfRenderWindow_display(game->window);
-	}
+    }
     sfSprite_destroy(sprite);
     destroy_game(game);
     return 0;
